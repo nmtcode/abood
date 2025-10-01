@@ -1,247 +1,360 @@
 <!-- صفحة أعمالنا -->
 <!DOCTYPE html>
 <html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>أعمالنا - تاج العرب للمطابخ</title>
 
-    <link rel="stylesheet" href="/assest/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <style>
-        
+      .page-header {
+        text-align: center;
+        padding: 60px 20px 40px 20px;
+        background-color: #222;
+        color: #fff;
+      }
 
-        .page-header {
-            text-align: center;
-            padding: 60px 20px 40px 20px;
-            background-color: #222;
-            color: #fff;
-        }
+      .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+      .project-card {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
 
-        .project-card {
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
+      .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
 
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+      .project-content {
+        padding: 20px;
+      }
 
-        .project-content {
-            padding: 20px;
-        }
+      .project-content h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #222;
+      }
 
-        .project-content h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #222;
-        }
+      .project-content p {
+        margin: 0;
+        color: #555;
+      }
 
-        .project-content p {
-            margin: 0;
-            color: #555;
-        }
+      /* الفاصل قبل الفوتر */
+      .section-divider {
+        height: 50px;
+        background-color: transparent;
+      }
 
-        /* الفاصل قبل الفوتر */
-        .section-divider {
-            height: 50px;
-            background-color: transparent;
-        }
+      footer {
+        background-color: #222;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+      }
 
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
+      footer p {
+        margin: 5px 0;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- رأس الصفحة -->
-   <header id="header" class="site-header" role="banner" dir="rtl">
-  <div class="header-inner">
-    <a href="/index.html" class="logo" aria-label="تاج العرب للمطابخ — الرجوع إلى الأعلى">
-      <img src="/assest/images/logo.png" alt="شعار تاج العرب للمطابخ" class="logo-img">
-      <span class="site-title">تاج العرب للمطابخ الألمنيوم</span>
-    </a>
+    <header id="header" class="site-header" role="banner" dir="rtl">
+      <div class="header-inner">
+        <a
+          href="../../index.html"
+          class="logo"
+          aria-label="تاج العرب للمطابخ — الرجوع إلى الأعلى"
+        >
+          <img
+            src="../images/logo.png"
+            alt="شعار تاج العرب للمطابخ"
+            class="logo-img"
+          />
+          <span class="site-title">تاج العرب للمطابخ الألمنيوم</span>
+        </a>
 
-    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="فتح/إغلاق القائمة">
-      ☰
-    </button>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="فتح/إغلاق القائمة"
+        >
+          ☰
+        </button>
 
-    <nav id="primary-nav" class="navbar" role="navigation" aria-label="القائمة الرئيسية">
-      <ul class="nav-list">
-        <li><a href="/index.html">الرئيسية</a></li>
-        <li><a href="/assest/pages/Services.html">خدماتنا</a></li>
-        <li><a href="/assest/pages/portfolio.html">أعمالنا</a></li>
-        <li><a href="/assest/pages/ContuctUs.html">تواصل معنا</a></li>
-      </ul>
-    </nav>
+        <nav
+          id="primary-nav"
+          class="navbar"
+          role="navigation"
+          aria-label="القائمة الرئيسية"
+        >
+          <ul class="nav-list">
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../pages/Services.html">خدماتنا</a></li>
+            <li><a href="../pages/portfolio.html">أعمالنا</a></li>
+            <li><a href="../pages/ContuctUs.html">تواصل معنا</a></li>
+          </ul>
+        </nav>
 
-            <a href="/assest/pages/ContuctUs.html" class="btn primary-btn pulse-animation">طلب عرض سعر</a>
-  </div>
-</header>
+        <a
+          href="../pages/ContuctUs.html"
+          class="btn primary-btn call-to-action-btn"
+          >اطلب عرض سعر</a
+        >
+      </div>
+    </header>
 
-
-
-
-
-<!-- صفحة تواصل معنا -->
-<section class="contact-section">
-    <div class="contact-container" style="max-width: 1000px; margin: 0 auto; padding: 40px 20px; display: flex; flex-wrap: wrap; gap: 40px;">
-
+    <!-- صفحة تواصل معنا -->
+    <section class="contact-section">
+      <div
+        class="contact-container"
+        style="
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: 40px 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+        "
+      >
         <!-- معلومات الاتصال -->
-        <div class="contact-info" style="flex: 1; min-width: 300px;">
-            <h2>تواصل معنا</h2>
+        <div class="contact-info" style="flex: 1; min-width: 300px">
+          <h2>تواصل معنا</h2>
 
-            <div class="contact-item" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                <i class="fas fa-map-marker-alt" style="font-size: 24px; color: #222;"></i>
-                <p>طريق الملك فهد، الرياض، المملكة العربية السعودية</p>
-            </div>
+          <div
+            class="contact-item"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              margin-bottom: 20px;
+            "
+          >
+            <i
+              class="fas fa-map-marker-alt"
+              style="font-size: 24px; color: #222"
+            ></i>
+            <p>طريق الملك فهد، الرياض، المملكة العربية السعودية</p>
+          </div>
 
-            <div class="contact-item" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                <i class="fas fa-phone-alt" style="font-size: 24px; color: #222;"></i>
-                <p>+966 50 XXX XXXX</p>
-            </div>
+          <div
+            class="contact-item"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              margin-bottom: 20px;
+            "
+          >
+            <i
+              class="fas fa-phone-alt"
+              style="font-size: 24px; color: #222"
+            ></i>
+            <p>+966 50 XXX XXXX</p>
+          </div>
 
-            <div class="contact-item" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                <i class="fas fa-envelope" style="font-size: 24px; color: #222;"></i>
-                <p>info@tajalarab.sa</p>
-            </div>
+          <div
+            class="contact-item"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              margin-bottom: 20px;
+            "
+          >
+            <i class="fas fa-envelope" style="font-size: 24px; color: #222"></i>
+            <p>info@tajalarab.sa</p>
+          </div>
 
-            <!-- خريطة Google Maps -->
-            <div class="map" style="margin-top: 30px; border-radius: 10px; overflow: hidden;">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.934444444444!2d46.675!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f04f3f3f3f3f3%3A0x123456789abcdef!2sKing%20Fahd%20Road%2C%20Riyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1696130000000!5m2!1sen!2sus" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+          <!-- خريطة Google Maps -->
+          <div
+            class="map"
+            style="margin-top: 30px; border-radius: 10px; overflow: hidden"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.934444444444!2d46.675!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f04f3f3f3f3f3%3A0x123456789abcdef!2sKing%20Fahd%20Road%2C%20Riyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1696130000000!5m2!1sen!2sus"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
         </div>
 
         <!-- نموذج الاتصال -->
-        <div class="contact-form" style="flex: 1; min-width: 300px;">
-            <h2>أرسل لنا رسالة</h2>
-            <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-                <input type="text" name="name" placeholder="الاسم الكامل" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-                <input type="email" name="email" placeholder="البريد الإلكتروني" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-                <input type="text" name="subject" placeholder="الموضوع" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-                <textarea name="message" placeholder="الرسالة" rows="6" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
-                <button type="submit" style="padding: 12px; border: none; border-radius: 5px; background-color: #222; color: #fff; cursor: pointer;">إرسال</button>
-            </form>
+        <div class="contact-form" style="flex: 1; min-width: 300px">
+          <h2>أرسل لنا رسالة</h2>
+          <form
+            action="#"
+            method="POST"
+            style="display: flex; flex-direction: column; gap: 15px"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="الاسم الكامل"
+              required
+              style="padding: 10px; border-radius: 5px; border: 1px solid #ccc"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="البريد الإلكتروني"
+              required
+              style="padding: 10px; border-radius: 5px; border: 1px solid #ccc"
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="الموضوع"
+              required
+              style="padding: 10px; border-radius: 5px; border: 1px solid #ccc"
+            />
+            <textarea
+              name="message"
+              placeholder="الرسالة"
+              rows="6"
+              required
+              style="padding: 10px; border-radius: 5px; border: 1px solid #ccc"
+            ></textarea>
+            <button
+              type="submit"
+              style="
+                padding: 12px;
+                border: none;
+                border-radius: 5px;
+                background-color: #222;
+                color: #fff;
+                cursor: pointer;
+              "
+            >
+              إرسال
+            </button>
+          </form>
         </div>
-
-    </div>
-</section>
-
-<div class="section-divider"></div>
-
-
-<div class="section-divider"></div>
-
-    
-
-<div class="section-divider"></div>
-
-
- <!-- ====== قسم قبل الفوتر ====== -->
-<section class="pre-footer">
-  <div class="pre-footer-container">
-    <div class="pre-footer-row">
-      
-      <!-- العمود الأول -->
-      <div class="pre-footer-column about-company">
-        <div class="pre-footer-logo">
-          <img src="/assest/images/logo.png" 
-               alt="شعار مطابخ الرياض" class="footer-logo">
-        </div>
-        <p>
-          مجموعة واسعة من التصاميم المبتكرة التي تجمع بين الجمال والوظيفة. 
-          نحن نعمل على تلبية احتياجات عملائنا من خلال حلول مخصصة تناسب كل الأذواق والمساحات، 
-          مع التركيز على الجودة العالية والخدمة الممتازة.
-        </p>
       </div>
+    </section>
 
-      <!-- العمود الثاني -->
-      <div class="pre-footer-column contact-info">
-        <h3 class="footer-title">كيف تجدنا</h3>
-        <div class="contact-list">
-          <div><i class="fas fa-calendar-alt"></i> الأيام: من السبت - الجمعة</div>
-          <div><i class="fas fa-clock"></i> ساعات العمل: 07 صباحاً - 11 مساءً</div>
-          <div><i class="fas fa-map-marker-alt"></i> الرياض - المملكة العربية السعودية</div>
-          <div><i class="fas fa-phone"></i> <a href="tel:0551698379">جوال: 0551698379</a></div>
-          <div><i class="fab fa-whatsapp"></i> 
-            <a href="https://wa.me/966551698379" target="_blank">واتساب: 0551698379</a>
+    <div class="section-divider"></div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-divider"></div>
+
+    <!-- ====== قسم قبل الفوتر ====== -->
+    <section class="pre-footer">
+      <div class="pre-footer-container">
+        <div class="pre-footer-row">
+          <!-- العمود الأول -->
+          <div class="pre-footer-column about-company">
+            <div class="pre-footer-logo">
+              <img
+                src="assest/images/logo.png"
+                alt="شعار مطابخ الرياض"
+                class="footer-logo"
+              />
+            </div>
+            <p>
+              مجموعة واسعة من التصاميم المبتكرة التي تجمع بين الجمال والوظيفة.
+              نحن نعمل على تلبية احتياجات عملائنا من خلال حلول مخصصة تناسب كل
+              الأذواق والمساحات، مع التركيز على الجودة العالية والخدمة الممتازة.
+            </p>
+          </div>
+
+          <!-- العمود الثاني -->
+          <div class="pre-footer-column contact-info">
+            <h3 class="footer-title">كيف تجدنا</h3>
+            <div class="contact-list">
+              <div>
+                <i class="fas fa-calendar-alt"></i> الأيام: من السبت - الجمعة
+              </div>
+              <div>
+                <i class="fas fa-clock"></i> ساعات العمل: 07 صباحاً - 11 مساءً
+              </div>
+              <div>
+                <i class="fas fa-map-marker-alt"></i> الرياض - المملكة العربية
+                السعودية
+              </div>
+              <div>
+                <i class="fas fa-phone"></i>
+                <a href="tel:0551698379">جوال: 0551698379</a>
+              </div>
+              <div>
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/966551698379" target="_blank"
+                  >واتساب: 0551698379</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- العمود الثالث -->
+          <div class="pre-footer-column services">
+            <h3 class="footer-title">مطابخ تاج العرب - حاري الانشاء ....</h3>
+            <p>
+              مطابخ تاج العرب فريق مؤهل يمتلك الخبرة والكفاءة حيث يعمل على انتاج
+              مختلف اشكال المطابخ الحديثة في مدينة الرياض بكل أحيائها.
+            </p>
+            <ul class="services-list">
+              <li>تفصيل مطابخ المنيوم</li>
+              <li>تفصيل مطابخ خشب</li>
+              <li>فك وتركيب المطابخ بالرياض</li>
+              <li>تغيير ألوان المطابخ</li>
+              <li>أعمال صيانة المطابخ</li>
+            </ul>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- العمود الثالث -->
-      <div class="pre-footer-column services">
-        <h3 class="footer-title">مطابخ فن الرياض</h3>
-        <p>
-          مطابخ فن الرياض فريق مؤهل يمتلك الخبرة والكفاءة حيث يعمل على انتاج 
-          مختلف اشكال المطابخ الحديثة في مدينة الرياض بكل أحيائها.
-        </p>
-        <ul class="services-list">
-          <li>تفصيل مطابخ المنيوم</li>
-          <li>تفصيل مطابخ خشب</li>
-          <li>فك وتركيب المطابخ بالرياض</li>
-          <li>تغيير ألوان المطابخ</li>
-          <li>أعمال صيانة المطابخ</li>
-        </ul>
-      </div>
+    <!-- تحميل Font Awesome للآيقونات -->
 
-    </div>
-  </div>
-</section>
-
-    <!-- الفوتر -->
-   <footer id="footer">
-    <div class="footer-content">
+    <footer id="footer">
+      <div class="footer-content">
         <div class="footer-info">
-            <p class="footer-logo">تاج العرب للمطابخ</p>
-            <p>طريق الملك فهد، الرياض، المملكة العربية السعودية</p>
-            <p>+966 50 XXX XXXX</p>
-            <p>info@tajalarab.sa</p>
+          <p class="footer-logo">تاج العرب للمطابخ</p>
+          <p>جاري العمل....</p>
+          <p></p>
+          <p></p>
         </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2024 تاج العرب للمطابخ. جميع الحقوق محفوظة.</p>
-    </div>
-</footer>
-
-</body>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 تاج العرب للمطابخ. جميع الحقوق محفوظة.</p>
+      </div>
+    </footer>
+  </body>
 </html>
