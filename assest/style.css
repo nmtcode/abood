@@ -1,0 +1,711 @@
+/* ================= المتغيرات والأساسيات ================= */
+/* :root {
+  --background-color: #ffffff;
+  --secondary-color: #e6e6e6;
+  --text-color: #222;
+  --transition-duration: 0.22s;
+  --max-width: 1200px;
+} */
+:root {
+  /*
+    الألوان المستخرجة (Hex):
+
+البني الداكن: #9a8b6c
+
+البيج الفاتح: #f7f0cb
+
+الذهبي الرملي: #d0b88f
+ */
+   --primary-color: #9a8b6c;   /* بني داكن */
+  --secondary-color: #f7f0cb; /* بيج فاتح للخلفيات */
+  --accent-color: #d0b88f;    /* ذهبي رملي */
+  
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --dark-color: #222222;
+  --transition-duration: 0.22s;
+
+  --max-width: 1200px;
+
+  /* ✅ المتغيرات الجديدة والواضحة */
+  /* استخدم Cairo للنصوص العربية كخط أساسي لجميع النصوص */
+  --arabic-font: "Cairo", sans-serif;
+
+  /* استخدم DM Sans للعناوين أو الأرقام/الرموز (اختياري) */
+  --latin-font: "DM Sans", sans-serif;
+
+  --transition-duration: 0.3s;
+}
+
+/* ================= التحريكات (Animations) ================= */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(223, 17, 216, 0.27);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(165, 42, 42, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(165, 42, 42, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* تحديث أنماط الجسم والعناوين لاستخدام المتغير الجديد */
+body {
+  font-family: var(--arabic-font); /* تطبيق الخط على كل النصوص */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: var(--latin-font), var(--arabic-font);
+  font-weight: 700; /* يمكن تحديد وزن جريء للعناوين */
+}
+
+/* ================= الأنماط العامة (General Styles) ================= */
+
+/* تطبيق التحريك على الأقسام التي تحتاج إليها */
+.fade-in,
+.slide-up {
+  opacity: 0; /* يبدأ مخفياً */
+  animation-name: none; /* يتم تشغيلها لاحقًا عبر جافاسكريبت للحصول على أفضل تجربة، ولكن يمكننا تعيينها هنا */
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+/* لتأخير التحريك بين البطاقات */
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.section {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 10px auto 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color var(--transition-duration),
+    transform var(--transition-duration);
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.primary-btn:hover {
+  background-color: var(--dark-color);
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background-color: var(--dark-color);
+  color: var(--background-color);
+}
+
+.secondary-btn:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+/* ================= الهيدر (Header) ================= */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  /* هذه الأنماط أصبحت لحاوية الرابط */
+  text-decoration: none; /* إزالة خط الرابط */
+  display: flex; /* لضمان محاذاة الصورة */
+  align-items: center;
+}
+
+.header-logo:hover {
+  transform: scale(1.05); /* تأثير تكبير بسيط عند المرور */
+}
+
+.logo-content {
+  display: flex; /* تفعيل فليكس بوكس لترتيب العناصر في سطر واحد */
+  align-items: center; /* محاذاة عمودية في المنتصف */
+  gap: 10px; /* مسافة بين الشعار والنص */
+}
+
+.logo-content h2 {
+  /* أنماط النص لجعله يبدو كجزء من الشعار */
+  font-size: 1.2em; /* حجم مناسب */
+  margin: 0;
+  color: var(--primary-color);
+
+  /* جعل النص يظهر ثانياً (يسار الشعار في RTL) */
+  order: 2;
+}
+
+.header-logo {
+  height: 60px; /* الحجم الذي اخترته */
+  width: auto;
+  transition: transform var(--transition-duration);
+
+  /* جعل الصورة تظهر أولاً (يمين النص في RTL) */
+  order: 1;
+}
+
+/* تعديل حجم النص في شاشات الجوال */
+@media (max-width: 768px) {
+  .logo-content h2 {
+    font-size: 1em; /* تصغير النص ليناسب شاشات الجوال */
+  }
+}
+/* ================= الهيدر (Header) ================= */
+/* ... (الأنماط الموجودة مسبقًا) ... */
+/* ---------- Variables (ضعها في أعلى ملفك إذا لم تكن موجودة) ---------- */
+
+
+/* ---------- Header base ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--secondary-color);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* داخل الهيدر — حاوية مرنة مركزة */
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* شعار - قائمة - زر */
+  gap: 12px;
+  direction: rtl; /* نتأكد من RTL داخل الحاوية */
+}
+
+/* الشعار */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.logo-img {
+  height: 56px;
+  width: auto;
+  display: block;
+  transition: transform var(--transition-duration);
+}
+.logo:hover .logo-img {
+  transform: scale(1.05);
+}
+
+.site-title {
+  font-size: 1.05rem;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+/* زر القائمة (للشاشات الصغيرة) */
+.menu-toggle {
+  display: none; /* يظهر فقط في الموبايل عبر media query */
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* القائمة الرئيسية — افقياً في الشاشات العريضة */
+.navbar {
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.nav-list li a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color var(--transition-duration);
+  position: relative;
+}
+.nav-list li a:hover {
+  color: var(--primary-color);
+}
+
+/* لعبة خط تحت النص عند hover — بسيط وآمن */
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  right: 12px; /* بالنسبة لـ RTL */
+  bottom: 6px;
+  height: 2px;
+  width: 0;
+  background: var(--primary-color);
+  transition: width var(--transition-duration) ease;
+}
+.nav-list li a:hover::after {
+  width: calc(100% - 24px);
+  right: 12px;
+}
+
+/* زر نداء الفعل */
+.call-to-action-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform var(--transition-duration),
+    box-shadow var(--transition-duration);
+}
+.call-to-action-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- Responsive: شاشات صغيرة ---------- */
+@media (max-width: 900px) {
+  .header-inner {
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* نخفي الـ nav افتراضياً ونظهرها عندما يفتح المستخدم القائمة */
+  .navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--background-color);
+    border-bottom: 1px solid var(--secondary-color);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    display: none;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+  .nav-list li a {
+    padding: 12px 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+  }
+
+  /* عندما تضاف الفئة open إلى الهيدر تظهر القائمة */
+  .site-header.open .navbar {
+    display: block;
+  }
+
+  /* اضغطات خفيفة على زر الـ CTA لتظهر أقل إزعاجا */
+  .call-to-action-btn {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* تحسينات الوصول — تركيز العناصر */
+a:focus,
+button:focus {
+  outline: 3px solid rgba(13, 110, 253, 0.12);
+  outline-offset: 2px;
+}
+
+/* ================= قسم البطل (Hero) ================= */
+.hero-section {
+  background: url("images/hero_img.avif") no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* ================= أقسام البطاقات (Grid) ================= */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: right;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-duration);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.service-card,
+.portfolio-card {
+  padding: 20px;
+}
+
+.service-card h3,
+.portfolio-card h3 {
+  color: var(--primary-color);
+  margin: 15px 0 10px;
+}
+
+.service-card p,
+.portfolio-card p {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* ================= آراء العملاء (Testimonials) ================= */
+.testimonials-section {
+  background-color: var(--secondary-color);
+}
+
+.testimonials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* للسماح للبطاقات بالنزول لسطر جديد في الشاشات الصغيرة */
+}
+
+.testimonial-card {
+  flex: 0 0 45%; /* تأخذ 45% من العرض في شاشات سطح المكتب */
+  background-color: var(--background-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.client-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid var(--primary-color);
+}
+
+.review {
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.client-info {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.client-location {
+  font-size: 0.9em;
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+
+/* ====== قسم قبل الفوتر ====== */
+.pre-footer {
+  background-color: var(--secondary-color);
+  padding: 50px 5%;
+  color: var(--text-color);
+}
+
+.pre-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pre-footer-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ====== الأعمدة ====== */
+.pre-footer{
+            margin-top: 50px; /* عدّل الرقم حسب المسافة المطلوبة */
+
+}
+.pre-footer-column {
+  line-height: 1.8;
+}
+
+.footer-logo {
+  max-width: 160px;
+  margin-bottom: 15px;
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* ====== عمود: معلومات التواصل ====== */
+.contact-list div {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-list i {
+  color: var(--primary-color);
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.contact-list a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color var(--transition-duration);
+}
+
+.contact-list a:hover {
+  color: var(--primary-color);
+}
+
+/* ====== عمود: قائمة الخدمات ====== */
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.services-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-right: 18px;
+}
+
+.services-list li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* ====== الاستجابة للشاشات الصغيرة ====== */
+@media (max-width: 768px) {
+  .pre-footer {
+    padding: 30px 5%;
+    text-align: center;
+  }
+
+  .contact-list div {
+    justify-content: center;
+  }
+
+  .services-list li {
+    padding-right: 0;
+  }
+}
+
+
+
+/* ================= الفوتر (Footer) ================= */
+#footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 40px 5% 10px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  
+}
+
+.copyright {
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9em;
+}
+
+/* ================= الاستجابة (Media Queries) ================= */
+
+/* للهواتف والأجهزة الصغيرة (أقل من 768 بكسل) */
+@media (max-width: 768px) {
+  /* إعدادات الهيدر للجوال */
+  #header {
+    flex-wrap: wrap;
+    padding: 10px 5%;
+  }
+
+  .navbar {
+    width: 100%;
+    display: none; /* إخفاء القائمة افتراضيا */
+    order: 3; /* وضع القائمة أسفل الشعار */
+    margin-top: 10px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    border-top: 1px solid var(--secondary-color);
+  }
+
+  .nav-list li a {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu-toggle {
+    display: block; /* إظهار زر القائمة */
+  }
+
+  /* يمكنك استخدام جافاسكريبت لتبديل هذا الكلاس لإظهار القائمة */
+  .navbar.active {
+    display: block;
+  }
+
+  /* قسم البطل */
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  /* بطاقات آراء العملاء */
+  .testimonial-card {
+    flex: 0 0 90%; /* تجعل كل بطاقة تأخذ تقريبا كامل عرض الشاشة */
+  }
+
+  .section {
+    padding: 40px 5%; /* تقليل البادينج */
+  }
+}

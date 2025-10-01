@@ -1,0 +1,319 @@
+<!-- صفحة أعمالنا -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أعمالنا - تاج العرب للمطابخ</title>
+
+    <link rel="stylesheet" href="/assest/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 40px 20px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .project-content p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* الفاصل قبل الفوتر */
+        .section-divider {
+            height: 50px;
+            background-color: transparent;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- رأس الصفحة -->
+    <header id="header" class="site-header" role="banner" dir="rtl">
+  <div class="header-inner">
+    <a href="/index.html" class="logo" aria-label="تاج العرب للمطابخ — الرجوع إلى الأعلى">
+      <img src="/assest/images/logo.png" alt="شعار تاج العرب للمطابخ" class="logo-img">
+      <span class="site-title">تاج العرب للمطابخ الألمنيوم</span>
+    </a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="فتح/إغلاق القائمة">
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="navbar" role="navigation" aria-label="القائمة الرئيسية">
+      <ul class="nav-list">
+        <li><a href="/index.html">الرئيسية</a></li>
+        <li><a href="/assest/pages/Services.html">خدماتنا</a></li>
+        <li><a href="/assest/pages/portfolio.html">أعمالنا</a></li>
+        <li><a href="/assest/pages/ContuctUs.html">تواصل معنا</a></li>
+      </ul>
+    </nav>
+
+            <a href="/assest/pages/ContuctUs.html" class="btn primary-btn pulse-animation">طلب عرض سعر</a>
+  </div>
+</header>
+
+
+
+
+    
+<!-- معرض المشاريع -->
+<section class="projects-container">
+
+    <div class="project-card">
+        <img src="/assest/images/project1.jpg" alt="مشروع 1">
+        <div class="project-content">
+            <h3>مشروع مطبخ مودرن 1</h3>
+            <p>تصميم عصري متكامل لمطبخ حديث يدمج الأناقة والعملية.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project2.jpg" alt="مشروع 2">
+        <div class="project-content">
+            <h3>مشروع مطبخ مودرن 2</h3>
+            <p>تصميم عملي مع لمسات حديثة تجعل المطبخ أكثر أناقة.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project3.jpg" alt="مشروع 3">
+        <div class="project-content">
+            <h3>مشروع مطبخ مفتوح 3</h3>
+            <p>مطبخ مفتوح مع جزيرة مركزية لتسهيل الحركة والتخزين.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project4.jpg" alt="مشروع 4">
+        <div class="project-content">
+            <h3>مشروع مطبخ كلاسيكي 4</h3>
+            <p>تصميم كلاسيكي أنيق يجمع بين الجمال والوظيفة.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project5.jpg" alt="مشروع 5">
+        <div class="project-content">
+            <h3>مشروع مطبخ مودرن 5</h3>
+            <p>حلول مبتكرة لتصميم المطبخ مع ألوان عصرية.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project6.jpg" alt="مشروع 6">
+        <div class="project-content">
+            <h3>مشروع مطبخ مفتوح 6</h3>
+            <p>تصميم مطبخ مفتوح على الصالة مع جزيرة عملية.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project7.jpg" alt="مشروع 7">
+        <div class="project-content">
+            <h3>مشروع مطبخ كلاسيكي 7</h3>
+            <p>استخدام الخشب الطبيعي لإطلالة كلاسيكية أنيقة.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project8.jpg" alt="مشروع 8">
+        <div class="project-content">
+            <h3>مشروع مطبخ مودرن 8</h3>
+            <p>تصميم عصري مع خزائن ذكية لاستغلال المساحات.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project9.jpg" alt="مشروع 9">
+        <div class="project-content">
+            <h3>مشروع مطبخ مفتوح 9</h3>
+            <p>تصميم عملي مع جزيرة مركزية وألوان هادئة.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project10.jpg" alt="مشروع 10">
+        <div class="project-content">
+            <h3>مشروع مطبخ كلاسيكي 10</h3>
+            <p>تصميم كلاسيكي فاخر يجمع بين الخشب والرخام.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project11.jpg" alt="مشروع 11">
+        <div class="project-content">
+            <h3>مشروع مطبخ مودرن 11</h3>
+            <p>تصميم عصري مع ألوان متناسقة وإضاءة ذكية.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project12.jpg" alt="مشروع 12">
+        <div class="project-content">
+            <h3>مشروع مطبخ مفتوح 12</h3>
+            <p>مطبخ مفتوح على الصالة مع تخزين ذكي ومريح.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project13.jpg" alt="مشروع 13">
+        <div class="project-content">
+            <h3>مشروع مطبخ كلاسيكي 13</h3>
+            <p>تصميم كلاسيكي متقن مع استخدام خامات عالية الجودة.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project14.jpg" alt="مشروع 14">
+        <div class="project-content">
+            <h3>مشروع مطبخ مودرن 14</h3>
+            <p>تصميم مبتكر مع جزيرة مركزية وألوان متناسقة.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/assest/images/project15.jpg" alt="مشروع 15">
+        <div class="project-content">
+            <h3>مشروع مطبخ مفتوح 15</h3>
+            <p>مطبخ مفتوح على الصالة مع لمسات عصرية أنيقة.</p>
+        </div>
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+ <!-- ====== قسم قبل الفوتر ====== -->
+<section class="pre-footer">
+  <div class="pre-footer-container">
+    <div class="pre-footer-row">
+      
+      <!-- العمود الأول -->
+      <div class="pre-footer-column about-company">
+        <div class="pre-footer-logo">
+          <img src="/assest/images/logo.png" 
+               alt="شعار مطابخ الرياض" class="footer-logo">
+        </div>
+        <p>
+          مجموعة واسعة من التصاميم المبتكرة التي تجمع بين الجمال والوظيفة. 
+          نحن نعمل على تلبية احتياجات عملائنا من خلال حلول مخصصة تناسب كل الأذواق والمساحات، 
+          مع التركيز على الجودة العالية والخدمة الممتازة.
+        </p>
+      </div>
+
+      <!-- العمود الثاني -->
+      <div class="pre-footer-column contact-info">
+        <h3 class="footer-title">كيف تجدنا</h3>
+        <div class="contact-list">
+          <div><i class="fas fa-calendar-alt"></i> الأيام: من السبت - الجمعة</div>
+          <div><i class="fas fa-clock"></i> ساعات العمل: 07 صباحاً - 11 مساءً</div>
+          <div><i class="fas fa-map-marker-alt"></i> الرياض - المملكة العربية السعودية</div>
+          <div><i class="fas fa-phone"></i> <a href="tel:0551698379">جوال: 0551698379</a></div>
+          <div><i class="fab fa-whatsapp"></i> 
+            <a href="https://wa.me/966551698379" target="_blank">واتساب: 0551698379</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- العمود الثالث -->
+      <div class="pre-footer-column services">
+        <h3 class="footer-title">مطابخ فن الرياض</h3>
+        <p>
+          مطابخ فن الرياض فريق مؤهل يمتلك الخبرة والكفاءة حيث يعمل على انتاج 
+          مختلف اشكال المطابخ الحديثة في مدينة الرياض بكل أحيائها.
+        </p>
+        <ul class="services-list">
+          <li>تفصيل مطابخ المنيوم</li>
+          <li>تفصيل مطابخ خشب</li>
+          <li>فك وتركيب المطابخ بالرياض</li>
+          <li>تغيير ألوان المطابخ</li>
+          <li>أعمال صيانة المطابخ</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- الفوتر -->
+   <footer id="footer">
+    <div class="footer-content">
+        <div class="footer-info">
+            <p class="footer-logo">تاج العرب للمطابخ</p>
+            <p>طريق الملك فهد، الرياض، المملكة العربية السعودية</p>
+            <p>+966 50 XXX XXXX</p>
+            <p>info@tajalarab.sa</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 تاج العرب للمطابخ. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+</body>
+</html>
