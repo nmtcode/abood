@@ -732,3 +732,8 @@ button:focus {
 .rating i:hover ~ i {
     color: #ccc; /* النجوم التي بعد النجمة التي مر عليها تصبح رمادية */
 }
+
+.fa-star
+{
+  color: var(--accent-color);
+}
