@@ -744,9 +744,8 @@ button:focus {
   transition: transform 0.3s;
 }
 
-.floating-btn img {
-  width: 30px;
-  height: 30px;
+.floating-btn i {
+  color: #000000;
 }
 
 .floating-btn:hover {
