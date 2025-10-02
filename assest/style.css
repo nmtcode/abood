@@ -87,7 +87,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
-
 }
 
 h1,
@@ -732,34 +731,34 @@ button:focus {
   color: var(--accent-color);
 }
 .floating-btn {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    transition: transform 0.3s;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.3s;
 }
 
 .floating-btn img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .floating-btn:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .whatsapp {
-    right: 20px;
-    background-color: #25D366;
+  right: 20px;
+  background-color: #25d366;
 }
 
 .call {
-    right: 90px;
-    background-color: #007bff;
+  right: 90px;
+  background-color: #007bff;
 }
