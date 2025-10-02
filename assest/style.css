@@ -709,3 +709,26 @@ button:focus {
     padding: 40px 5%; /* تقليل البادينج */
   }
 }
+
+.rating {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.rating i {
+    color: #ffd700; /* اللون الذهبي للنجوم */
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+/* تأثير عند مرور الماوس */
+.rating i:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+/* تأثير عند المرور على النجوم السابقة أيضًا */
+.rating i:hover ~ i {
+    color: #ccc; /* النجوم التي بعد النجمة التي مر عليها تصبح رمادية */
+}
