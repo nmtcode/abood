@@ -651,6 +651,13 @@ button:focus {
 /* ================= الاستجابة (Media Queries) ================= */
 
 /* للهواتف والأجهزة الصغيرة (أقل من 768 بكسل) */
+@media(max-width: 477px)
+{
+  .call-to-action-btn
+  {
+    font-size: 11px;
+  }
+}
 @media (max-width: 768px) {
   /* إعدادات الهيدر للجوال */
   #header {
@@ -658,6 +665,10 @@ button:focus {
     padding: 10px 5%;
   }
 
+  /* .call-to-action-btn
+  {
+    font-size: 11px;
+  } */
   .navbar {
     width: 100%;
     display: none; /* إخفاء القائمة افتراضيا */
@@ -730,3 +741,4 @@ button:focus {
 .fa-star {
   color: var(--accent-color);
 }
+
