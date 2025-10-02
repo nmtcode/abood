@@ -48,6 +48,41 @@
 <meta name="twitter:description" content="تصميم وتركيب مطابخ مودرن وكلاسيكية بجودة عالية.">
 <meta name="twitter:image" content="assest/images/logo.png">
 
+<style>
+  .floating-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.floating-btn i {
+  color: #000000;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  right: 20px;
+  background-color: #25d366;
+}
+
+.call {
+  right: 90px;
+  background-color: #007bff;
+}
+
+</style>
+
 </head>
 <body>
 
@@ -59,10 +94,6 @@
       <img src="assest/images/logo.png" alt="شعار تاج العرب للمطابخ" class="logo-img">
       <span class="site-title">تاج العرب للمطابخ الألمنيوم</span>
     </a>
-
-    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="فتح/إغلاق القائمة">
-      ☰
-    </button>
 
     <nav id="primary-nav" class="navbar" role="navigation" aria-label="القائمة الرئيسية">
       <ul class="nav-list">
