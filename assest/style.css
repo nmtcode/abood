@@ -25,6 +25,15 @@
   --dark-color: #222222;
   --transition-duration: 0.22s;
 
+    
+    --kb-bg: #ffffff;
+    --kb-section-bg: #fbfbfb;
+    --kb-accent: #9a8b6c; /* لون أيقونة / hover */
+    --kb-text:#222;
+    --kb-muted:#8a8a8a;
+    --kb-item-bg:#fff;
+    --kb-border:#e6e6e6;
+  
   --max-width: 1200px;
 
   /* ✅ المتغيرات الجديدة والواضحة */
@@ -601,15 +610,7 @@ button:focus {
   font-weight: bold;
 }
 
-  :root{
-    --kb-bg: #ffffff;
-    --kb-section-bg: #fbfbfb;
-    --kb-accent: #0d6efd; /* لون أيقونة / hover */
-    --kb-text:#222;
-    --kb-muted:#8a8a8a;
-    --kb-item-bg:#fff;
-    --kb-border:#e6e6e6;
-  }
+
 
   /* --- container --- */
   .kb-service-areas {
