@@ -601,21 +601,133 @@ button:focus {
   font-weight: bold;
 }
 
-/* ====== الاستجابة للشاشات الصغيرة ====== */
-@media (max-width: 768px) {
-  .pre-footer {
-    padding: 30px 5%;
-    text-align: center;
+  :root{
+    --kb-bg: #ffffff;
+    --kb-section-bg: #fbfbfb;
+    --kb-accent: #0d6efd; /* لون أيقونة / hover */
+    --kb-text:#222;
+    --kb-muted:#8a8a8a;
+    --kb-item-bg:#fff;
+    --kb-border:#e6e6e6;
   }
 
-  .contact-list div {
+  /* --- container --- */
+  .kb-service-areas {
+    background: var(--kb-section-bg);
+    padding: 30px 18px;
+    direction: rtl; /* لو الموقع عربي */
+    font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  .kb-inner {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* عمود العنوان + العمود الرئيسي */
+    gap: 20px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* --- عنوان العمود الأول --- */
+  .kb-column-title {
+    display: flex;
+    align-items: center;
     justify-content: center;
   }
 
-  .services-list li {
-    padding-right: 0;
+  .kb-heading {
+    font-size: 20px;
+    margin: 0;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(13,110,253,0.08), rgba(13,110,253,0.03));
+    color: var(--kb-accent);
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
   }
-}
+
+  /* --- شبكة الأحياء --- */
+  .kb-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(6, minmax(0, 1fr)); /* يشبه kadence: عدة أعمدة صغيرة */
+    align-items: stretch;
+  }
+
+  /* عنصر الشبكة */
+  .kb-item {
+    background: var(--kb-item-bg);
+    border: 1px solid var(--kb-border);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    cursor: default;
+  }
+
+  .kb-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(15,23,42,0.08);
+    background: linear-gradient(180deg, #ffffff, #f7fbff);
+  }
+
+  .kb-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    background: rgba(13,110,253,0.08);
+    color: var(--kb-accent);
+    border: 1px solid rgba(13,110,253,0.12);
+  }
+
+  .kb-icon svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  .kb-item-title {
+    margin: 0;
+    font-size: 14px;
+    color: var(--kb-text);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  /* --- استجابة (Responsive) --- */
+  /* شاشات كبيرة مشابهة للّابتوب */
+  @media (max-width: 1300px) {
+    .kb-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .kb-inner { grid-template-columns: 260px 1fr; }
+  }
+
+  /* شاشات متوسطة (تابلت) -> 3 أعمدة في كل صف */
+  @media (max-width: 1000px) {
+    .kb-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .kb-inner { grid-template-columns: 1fr; } /* عنوان فوق الشبكة */
+    .kb-column-title { justify-content: start; padding-bottom: 6px; }
+    .kb-heading { width: 100%; text-align: center; }
+  }
+
+  /* شاشات صغيرة -> 2 أعمدة */
+  @media (max-width: 640px) {
+    .kb-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .kb-item { padding: 12px; }
+    .kb-heading { font-size: 18px; }
+  }
+
+  /* جوال ضيق -> 1 عمود */
+  @media (max-width: 420px) {
+    .kb-grid { grid-template-columns: 1fr; }
+  }
+
+
 
 /* ================= الفوتر (Footer) ================= */
 #footer {

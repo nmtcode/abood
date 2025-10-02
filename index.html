@@ -111,8 +111,8 @@
 
     
 
-    <button class="menu-toggle">☰</button>
-</header>
+    <!-- <button class="menu-toggle">☰</button>
+</header> -->
 
 <div>
   <!-- زر واتساب -->
@@ -225,57 +225,77 @@
         </div>
     </section>
 
-    <!-- ====== قسم قبل الفوتر ====== -->
-<section class="pre-footer">
-  <div class="pre-footer-container">
-    <div class="pre-footer-row">
-      
-      <!-- العمود الأول -->
-      <div class="pre-footer-column about-company">
-        <div class="pre-footer-logo">
-          <img src="assest/images/logo.png" 
-               alt="شعار مطابخ الرياض" class="footer-logo">
-        </div>
-        <p>
-          مجموعة واسعة من التصاميم المبتكرة التي تجمع بين الجمال والوظيفة. 
-          نحن نعمل على تلبية احتياجات عملائنا من خلال حلول مخصصة تناسب كل الأذواق والمساحات، 
-          مع التركيز على الجودة العالية والخدمة الممتازة.
-        </p>
-      </div>
+    <!-- ===========================
+   Service Areas (Kadence-like)
+   انسخ الكود كامل داخل الصفحة
+   =========================== -->
+<section class="kb-service-areas" aria-labelledby="kb-service-title">
+  <div class="kb-inner">
 
-      <!-- العمود الثاني -->
-      <div class="pre-footer-column contact-info">
-        <h3 class="footer-title">كيف تجدنا</h3>
-        <div class="contact-list">
-          <div><i class="fas fa-calendar-alt"></i> الأيام: من السبت - الجمعة</div>
-          <div><i class="fas fa-clock"></i> ساعات العمل: 07 صباحاً - 11 مساءً</div>
-          <div><i class="fas fa-map-marker-alt"></i> الرياض - المملكة العربية السعودية</div>
-          <div><i class="fas fa-phone"></i> <a href="tel:966111111111">جوال: +966111111111</a></div>
-          <div><i class="fab fa-whatsapp"></i> 
-            <a href="https://wa.me/966111111111" target="_blank">واتساب: +966111111111</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- العمود الثالث -->
-      <div class="pre-footer-column services">
-        <h3 class="footer-title">مطابخ تاج العرب - حاري الانشاء ....</h3>
-        <p>
-          مطابخ تاج العرب فريق مؤهل يمتلك الخبرة والكفاءة حيث يعمل على انتاج 
-          مختلف اشكال المطابخ الحديثة في مدينة الرياض بكل أحيائها.
-        </p>
-        <ul class="services-list">
-          <li>تفصيل مطابخ المنيوم</li>
-          <li>تفصيل مطابخ خشب</li>
-          <li>فك وتركيب المطابخ بالرياض</li>
-          <li>تغيير ألوان المطابخ</li>
-          <li>أعمال صيانة المطابخ</li>
-        </ul>
-      </div>
-
+    <!-- عمود العنوان -->
+    <div class="kb-column kb-column-title">
+      <h3 id="kb-service-title" class="kb-heading">
+        <strong>مناطق نطاق الخدمة</strong>
+      </h3>
     </div>
+
+    <!-- عمود الشبكة -->
+    <div class="kb-column kb-column-grid">
+      <div class="kb-grid">
+        <!-- عنصر واحد - كرر للكل -->
+        <article class="kb-item">
+          <span class="kb-icon" aria-hidden="true">
+            <!-- أيقونة pin (SVG) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                 stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </span>
+          <h4 class="kb-item-title">حي الصحافة</h4>
+        </article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي المحمدية</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي حطين</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي الملقا</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي النرجس</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي العارض</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي العزيزية</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي الدار البيضاء</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي بدر</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي الملز</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي غدير</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي لبن</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي الماجدية</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي الرمال</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي العليا</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي المونسيه</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي الياسمين</h4></article>
+
+        <article class="kb-item"><span class="kb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><h4 class="kb-item-title">حي الشفاء</h4></article>
+
+      </div>
+    </div>
+
   </div>
 </section>
+
+
 
 <!-- تحميل Font Awesome للآيقونات -->
 
