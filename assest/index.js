@@ -24,3 +24,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
 });
+
+function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    // رقمك في واتساب (بدون + وابدأ برمز الدولة)
+    const phoneNumber = "967735045280"; // ← غيّر الرقم هنا
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const text = `مرسل من نموذج الموقع:
+الاسم: ${name}
+البريد: ${email}
+الموضوع: ${subject}
+الرسالة: ${message}`;
+
+    const encodedText = encodeURIComponent(text);
+    const url = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+    // يفتح واتساب مباشرة
+    window.open(url, "_blank");
+  }
