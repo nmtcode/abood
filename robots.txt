@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nmtcode.github.io/abood/sitemap.xml

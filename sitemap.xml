@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- الصفحة الرئيسية -->
+  <url>
+    <loc>https://nmtcode.github.io/abood/</loc>
+    <lastmod>2025-10-04</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- مثال لصفحات إضافية (احذف أو عدّل حسب موقعك الفعلي) -->
+  <url>
+    <loc>https://nmtcode.github.io/abood/ContuctUs.html</loc>
+    <lastmod>2025-10-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nmtcode.github.io/abood/portfolio.html</loc>
+    <lastmod>2025-10-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nmtcode.github.io/abood/Services.html</loc>
+    <lastmod>2025-10-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
