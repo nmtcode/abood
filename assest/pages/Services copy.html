@@ -1,0 +1,414 @@
+<!-- صفحة أعمالنا -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أعمالنا - تاج العرب للمطابخ</title>
+
+    <script src="../index.js" defer></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 40px 20px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .project-content p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* الفاصل قبل الفوتر */
+        .section-divider {
+            height: 50px;
+            background-color: transparent;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style> -->
+    <style>
+      .services-section {
+        padding: 60px 20px;
+        background-color: #f8f8f8;
+      }
+
+      .services-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .service-card i {
+        font-size: 40px;
+        color: #222;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+      }
+
+      .service-card h3 {
+        margin-bottom: 10px;
+        color: #222;
+      }
+
+      .service-card p {
+        color: #555;
+      }
+
+      /* تأثير Hover */
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-card:hover i {
+        color: #d0b88f; /* لون أيقونة عند المرور */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- رأس الصفحة -->
+    <header id="header" class="site-header" role="banner" dir="rtl">
+      <div class="header-inner">
+        <a
+          href="/Abood/index.html"
+          class="logo"
+          aria-label="تاج العرب للمطابخ — الرجوع إلى الأعلى"
+        >
+          <img
+            src="../images/logo.png"
+            alt="شعار تاج العرب للمطابخ"
+            class="logo-img"
+          />
+          <span class="site-title">تاج العرب للمطابخ الألمنيوم</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="فتح/إغلاق القائمة"
+        >
+          ☰
+        </button>
+
+        <nav
+          id="primary-nav"
+          class="navbar"
+          role="navigation"
+          aria-label="القائمة الرئيسية"
+        >
+          <ul class="nav-list">
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../pages/Services.html">خدماتنا</a></li>
+            <li><a href="../pages/portfolio.html">أعمالنا</a></li>
+            <li><a href="../pages/ContuctUs.html">تواصل معنا</a></li>
+          </ul>
+        </nav>
+
+        <a
+          href="../pages/ContuctUs.html"
+          class="btn primary-btn call-to-action-btn"
+          >اطلب عرض سعر</a
+        >
+      </div>
+    </header>
+
+    <!-- صفحة خدماتنا -->
+    <section class="services-section">
+      <div class="services-container">
+        <!-- الخدمات 20 بطاقة -->
+        <!-- سأضع 20 خدمة متدرجة بالعنوان والمحتوى -->
+        <div class="service-card">
+          <i class="fas fa-kitchen-set"></i>
+          <h3>تصميم مطابخ مودرن 1</h3>
+          <p>
+            تصميم عصري عملي وجذاب يدمج الأناقة مع الاستفادة القصوى من المساحات.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-home"></i>
+          <h3>تصميم مطابخ كلاسيكية 2</h3>
+          <p>تصاميم فاخرة تجمع بين الخشب الطبيعي والخامات عالية الجودة.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-couch"></i>
+          <h3>مطابخ مفتوحة 3</h3>
+          <p>
+            تصميم مبتكر للمطابخ المفتوحة مع جزيرة مركزية لتسهيل الحركة والعمل.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-tools"></i>
+          <h3>تركيب وصيانة المطابخ 4</h3>
+          <p>خدمة تركيب كاملة وضمان صيانة للمطابخ لضمان الأداء المثالي.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-paint-roller"></i>
+          <h3>تشطيبات وخزائن 5</h3>
+          <p>تفصيل وتصميم خزائن مخصصة حسب مساحة المطبخ واحتياجات العميل.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>استشارات تصميم 6</h3>
+          <p>
+            نقدم استشارات لاختيار أفضل تصميم وألوان تناسب المساحة والذوق الشخصي.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-chair"></i>
+          <h3>تصميم جزيرة المطبخ 7</h3>
+          <p>تصميم جزيرة عملية للتخزين والعمل مع إضاءة مبتكرة.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-broom"></i>
+          <h3>تنظيف وترتيب بعد التركيب 8</h3>
+          <p>
+            خدمة تنظيف شاملة بعد تركيب المطبخ لضمان اللمسات النهائية المثالية.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-hand-holding-usd"></i>
+          <h3>تصميم اقتصادي 9</h3>
+          <p>تصاميم عملية وجميلة بميزانية مناسبة لجميع العملاء.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-seedling"></i>
+          <h3>تصميم صديق للبيئة 10</h3>
+          <p>استخدام خامات صديقة للبيئة مع تصميم مستدام وعملي.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-clock"></i>
+          <h3>تسليم سريع 11</h3>
+          <p>ضمان تسليم المشاريع في الوقت المحدد مع جودة عالية.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-star"></i>
+          <h3>تصميم فاخر 12</h3>
+          <p>تصميم مطابخ فاخرة مع لمسات عصرية مبتكرة وجمال لا يُضاهى.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-sync-alt"></i>
+          <h3>تحديث المطابخ القديمة 13</h3>
+          <p>تحويل المطبخ القديم إلى تصميم حديث عملي وجميل.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-light-emergency"></i>
+          <h3>إضاءة ذكية 14</h3>
+          <p>تركيب إضاءة متقدمة للمطبخ مع تحكم ذكي وفعالية عالية.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-layer-group"></i>
+          <h3>تنظيم المساحات 15</h3>
+          <p>استغلال المساحات الصغيرة بطريقة ذكية وفعالة.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-water"></i>
+          <h3>تركيب حوض ومواسير 16</h3>
+          <p>تركيب الحوض والمواسير بأفضل جودة لضمان عمل طويل الأمد.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-cogs"></i>
+          <h3>أجهزة مطبخ ذكية 17</h3>
+          <p>دمج الأجهزة الذكية بطريقة عملية لتسهيل الطهي والعمل اليومي.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-shapes"></i>
+          <h3>تصميم أشكال مبتكرة 18</h3>
+          <p>ابتكار أشكال هندسية وجمالية تضيف طابع خاص للمطبخ.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-user-tie"></i>
+          <h3>خدمة مخصصة 19</h3>
+          <p>تصاميم مخصصة حسب رغبة العميل مع متابعة دقيقة لجميع التفاصيل.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-award"></i>
+          <h3>ضمان الجودة 20</h3>
+          <p>تقديم أفضل جودة ممكنة مع ضمان عمل طويل الأمد لكل مشروع.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ====== قسم قبل الفوتر ====== -->
+    <section class="pre-footer">
+      <div class="pre-footer-container">
+        <div class="pre-footer-row">
+          <!-- العمود الأول -->
+          <div class="pre-footer-column about-company">
+            <div class="pre-footer-logo">
+              <img
+                src="../images/logo.png"
+                alt="شعار مطابخ الرياض"
+                class="footer-logo"
+              />
+            </div>
+            <p>
+              مجموعة واسعة من التصاميم المبتكرة التي تجمع بين الجمال والوظيفة.
+              نحن نعمل على تلبية احتياجات عملائنا من خلال حلول مخصصة تناسب كل
+              الأذواق والمساحات، مع التركيز على الجودة العالية والخدمة الممتازة.
+            </p>
+          </div>
+
+          <!-- العمود الثاني -->
+          <div class="pre-footer-column contact-info">
+            <h3 class="footer-title">كيف تجدنا</h3>
+            <div class="contact-list">
+              <div>
+                <i class="fas fa-calendar-alt"></i> الأيام: من السبت - الجمعة
+              </div>
+              <div>
+                <i class="fas fa-clock"></i> ساعات العمل: 07 صباحاً - 11 مساءً
+              </div>
+              <div>
+                <i class="fas fa-map-marker-alt"></i> الرياض - المملكة العربية
+                السعودية
+              </div>
+              <div>
+                <i class="fas fa-phone"></i>
+                <a href="tel:966500771377">جوال: 0500771377</a>
+              </div>
+              <div>
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/966558459841" target="_blank"
+                  >واتساب: 0558459841</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- العمود الثالث -->
+          <div class="pre-footer-column services">
+            <h3 class="footer-title">مطابخ تاج العرب - حاري الانشاء ....</h3>
+            <p>
+              مطابخ تاج العرب فريق مؤهل يمتلك الخبرة والكفاءة حيث يعمل على انتاج
+              مختلف اشكال المطابخ الحديثة في مدينة الرياض بكل أحيائها.
+            </p>
+            <ul class="services-list">
+              <li>تفصيل مطابخ المنيوم</li>
+              <li>تفصيل مطابخ خشب</li>
+              <li>فك وتركيب المطابخ بالرياض</li>
+              <li>تغيير ألوان المطابخ</li>
+              <li>أعمال صيانة المطابخ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- تحميل Font Awesome للآيقونات -->
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p class="footer-logo">تاج العرب للمطابخ</p>
+          <p>جاري العمل....</p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 تاج العرب للمطابخ. جميع الحقوق محفوظة.</p>
+      </div>
+    </footer>
+  </body>
+</html>
