@@ -1,0 +1,229 @@
+
+
+.floating-btn {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: transform 0.3s;
+      }
+      .floating-btn i {
+        color: #fff;
+        font-size: 26px;
+      }
+      .floating-btn:hover {
+        transform: scale(1.1);
+      }
+      .whatsapp {
+        left: 20px;
+        background-color: #25d366;
+      }
+      .call {
+        left: 90px;
+        background-color: #007bff;
+      }
+/* ======= Page Header ======= */
+.page-header {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+/* ======= Services Section ======= */
+.services-section {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #222;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.service-card p {
+    color: #555;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover i {
+    color: #d0b88f; /* لون أيقونة عند المرور */
+}
+
+/* ======= Projects Section ======= */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.project-content p {
+    margin: 0;
+    color: #555;
+}
+
+/* ======= Section Divider ======= */
+.section-divider {
+    height: 50px;
+    background-color: transparent;
+}
+
+/* ======= Footer ======= */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ======= Lightbox ======= */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ======= Lightbox Controls ======= */
+.lightbox-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 25px;
+}
+
+.lightbox button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lightbox button:hover {
+    color: #f5b400;
+}
+
+/* ======= Lightbox Caption ======= */
+.lightbox-caption {
+    color: #fff;
+    margin-top: 15px;
+    text-align: center;
+    max-width: 80%;
+}
+
+.lightbox-caption h3 {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.lightbox-caption p {
+    font-size: 1rem;
+    color: #ddd;
+}
