@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # رابط خريطة الموقع
-Sitemap: https://nmtcode.github.io/abood/sitemap.xml
+Sitemap: https://tajalarabkitchens.com/sitemap.xml
