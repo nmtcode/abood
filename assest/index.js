@@ -27,7 +27,7 @@ function sendToWhatsApp(event) {
     event.preventDefault();
 
     // رقمك في واتساب (بدون + وابدأ برمز الدولة)
-    const phoneNumber = "967735045280"; // ← غيّر الرقم هنا
+    const phoneNumber = "966558459841"; // ← غيّر الرقم هنا
 
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
