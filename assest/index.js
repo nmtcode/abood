@@ -1,5 +1,3 @@
-
-console.log('yeet');
 document.addEventListener('DOMContentLoaded', () => {
     // زر القائمة للجوال
     const menuToggle = document.querySelector('.menu-toggle');
