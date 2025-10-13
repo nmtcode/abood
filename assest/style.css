@@ -1,21 +1,5 @@
-/* ================= المتغيرات والأساسيات ================= */
-/* :root {
-  --background-color: #ffffff;
-  --secondary-color: #e6e6e6;
-  --text-color: #222;
-  --transition-duration: 0.22s;
-  --max-width: 1200px;
-} */
+
 :root {
-  /*
-    الألوان المستخرجة (Hex):
-
-البني الداكن: #9a8b6c
-
-البيج الفاتح: #f7f0cb
-
-الذهبي الرملي: #d0b88f
- */
   --primary-color: #9a8b6c; /* بني داكن */
   --secondary-color: #f7f0cb; /* بيج فاتح للخلفيات */
   --accent-color: #d0b88f; /* ذهبي رملي */
@@ -98,6 +82,36 @@ body {
   line-height: 1.6;
 }
 
+.floating-btn {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: transform 0.3s;
+      }
+      .floating-btn i {
+        color: #fff;
+        font-size: 26px;
+      }
+      .floating-btn:hover {
+        transform: scale(1.1);
+      }
+      .whatsapp {
+        left: 20px;
+        background-color: #25d366;
+      }
+      .call {
+        left: 90px;
+        background-color: #007bff;
+      }
+    
+      
 h1,
 h2,
 h3,
