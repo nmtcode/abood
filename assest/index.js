@@ -46,3 +46,20 @@ function sendToWhatsApp(event) {
     // يفتح واتساب مباشرة
     window.open(url, "_blank");
   }
+
+  // عند تحميل الصفحة
+window.addEventListener('DOMContentLoaded', () => {
+  const siteTitle = document.querySelector('.site-title');
+
+  function updateTitle() {
+    if (window.innerWidth <= 600) {
+      siteTitle.textContent = "تاج العرب"; // النص المختصر
+    } else {
+      siteTitle.textContent = "تاج العرب للمطابخ الألمنيوم"; // النص الكامل
+    }
+  }
+
+  // نفذ عند التحميل وعند تغيير حجم الشاشة
+  updateTitle();
+  window.addEventListener('resize', updateTitle);
+});

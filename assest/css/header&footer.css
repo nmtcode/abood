@@ -288,6 +288,8 @@ body {
     padding: 10px 14px;
     font-size: 0.95rem;
   }
+
+  
 }
 
 /* تحسينات الوصول — تركيز العناصر */
@@ -478,6 +480,8 @@ button:focus {
   .section {
     padding: 40px 5%; /* تقليل البادينج */
   }
+  
 }
+
 
 
