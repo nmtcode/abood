@@ -1,43 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://tajalarabkitchens.com/</loc>
     <lastmod>2025-10-11</lastmod>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nmtcode.sirv.com/images/logo.png</image:loc>
+      <image:caption>شعار تاج العرب للمطابخ</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nmtcode.sirv.com/images/tajalarabkitchens-logo.png?w=600&amp;format=webp</image:loc>
+      <image:caption>شعار تاج العرب للمطابخ</image:caption>
+    </image:image>
   </url>
 
-  <!-- الصفحات الإضافية -->
+  <!-- صفحة تواصل معنا -->
   <url>
     <loc>https://tajalarabkitchens.com/assest/pages/ContuctUs.html</loc>
     <lastmod>2025-10-11</lastmod>
     <priority>0.8</priority>
   </url>
 
+  <!-- صفحة الأعمال -->
   <url>
     <loc>https://tajalarabkitchens.com/assest/pages/portfolio.html</loc>
     <lastmod>2025-10-11</lastmod>
     <priority>0.8</priority>
   </url>
 
+  <!-- صفحة الخدمات -->
   <url>
     <loc>https://tajalarabkitchens.com/assest/pages/Services.html</loc>
     <lastmod>2025-10-11</lastmod>
     <priority>0.8</priority>
   </url>
-
-<url>
-  <loc>https://tajalarabkitchens.com/</loc>
-  <image:image>
-    <image:loc>https://nmtcode.sirv.com/images/logo.png</image:loc>
-    <image:caption>شعار تاج العرب للمطابخ</image:caption>
-  </image:image>
-</url>
-
-<image:image>
-  <image:loc>https://nmtcode.sirv.com/images/tajalarabkitchens-logo.png?w=600&format=webp</image:loc>
-  <image:caption>شعار تاج العرب للمطابخ</image:caption>
-</image:image>
 
 </urlset>
