@@ -125,8 +125,8 @@ h3,
 
 /* ================= قسم البطل (Hero) ================= */
 .hero-section {
-  background-image: url("https://nmtcode.sirv.com/tajalarabkitchens/hero_img.avif?&w=800")
-    no-repeat center center/cover;
+  background: url("https://nmtcode.sirv.com/tajalarabkitchens/hero_img.avif?w=800&q=50") no-repeat center center;
+  background-size: cover;
   height: 80vh;
   display: flex;
   justify-content: center;
